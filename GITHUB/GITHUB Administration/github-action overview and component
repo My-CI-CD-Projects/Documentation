@@ -1,9 +1,18 @@
+**Github action fully integrated with github.
+
 * github & gitlab ci are platform oriented solutions.
 if we have a plan to migrate to a different platform (like cloud) it is not the right solution to choose github or gitlab.
 we can use github action as a CICD tool ,like jenkins.
 
 In there, we write a .yaml file inside .github/.workflow .
 In that .yaml ,we use different commands.
+
+
+ ------     TRIGGER   ----------     USE         --------
+| EVENT | ---------> | Workflow | ------------> | Action |
+ ------                ---------                 --------
+
+
 
 name:
 on: [push]
@@ -60,6 +69,34 @@ use yaml formatter to verify the yaml file
 
 ex :- https://jsonformatter.org/yaml-formatter
 
+
+Trouble shooting tools for github action workflows
+
+1) workflow editor
+2) action debugging
+3) vs code extension
+4) try locally - nektos/act
+
+Github Action best practices
+
+01) versioning
+02) Documentation
+03) Test Coverage
+04) Maintain metadata
+05) Post to marketplace
+
+
+set,
+
+## ENVIRONMENT to deploy
+
+## SECRETS
+Secrets and variables allow you to manage reusable configuration data. Secrets are encrypted and are used for sensitive data.
+## RUNNER
+
+## PROTECTION RULES
+
+## DEPLOYMENT LOGS
 
 
 
