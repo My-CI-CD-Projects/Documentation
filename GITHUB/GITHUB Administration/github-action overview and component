@@ -53,7 +53,12 @@ github actions-streamlined and userfriendly UI
 jenkins- large & complex ----->expensive
 github- free for open source projects 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+use yaml formatter to verify the yaml file 
+
+ex :- https://jsonformatter.org/yaml-formatter
 
 
 
