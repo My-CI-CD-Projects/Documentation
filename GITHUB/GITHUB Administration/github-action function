@@ -1,0 +1,67 @@
+* github & gitlab ci are platform oriented solutions.
+if we have a plan to migrate to a different platform (like cloud) it is not the right solution to choose github or gitlab.
+we can use github action as a CICD tool ,like jenkins.
+
+In there, we write a .yaml file inside .github/.workflow .
+In that .yaml ,we use different commands.
+
+name:
+on: [push]
+-----------> whenever there is a push or commit in the repository by default the pipeline is executed.
+
+we can use n number of yaml files in .github/.workflow folder.
+
+
+
+
+jobs:  ------------------->even in one yaml file we can write multiple jobs(multiple pipelines)
+  build:
+    runs-on: ubuntu-latest
+
+strategy:
+  matrix:
+    python-version: {3.8,3.9}  ----------------->create environment
+
+steps:
+  uses: actions/checkout@v3 ------------------> checkout the code 
+
+
+
+
+*All the plugins are installed to github actions already ,no need to install the plugins separately as jenkins.
+
+Also we can create new self hosted runner if we need more space,security etc. to configure the runner (or pipeline)
+
+
+
+
+-------------------------ADVANTAGES OF GITHUB ACTIONS OVER JENKINS-------------------------------------
+
+##  hosting
+
+jenkins -self hosted
+github actions - hosted by github
+
+## user interface
+
+jenkins- complex and sophesticated UI
+github actions-streamlined and userfriendly UI
+
+
+## cost
+
+jenkins- large & complex ----->expensive
+github- free for open source projects 
+
+
+
+
+
+
+
+
+
+
+
+
+
